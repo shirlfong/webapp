@@ -168,8 +168,7 @@ def main():
             image = Image.open(uploaded_file).convert("RGB")
 
             # Displays image in Streamlit
-            image_resized = image.resize(IMAGE_SIZE)
-            st.image(image, caption="Uploaded Image", use_container_width=False)
+            st.image(image, caption="Uploaded Image", use_container_width=True)
 
             # Runs prediction on uploaded image and stores the results
             predictions = predict(image)
